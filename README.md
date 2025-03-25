@@ -8,14 +8,16 @@ The **Employee Management System** is a web-based application designed to manage
 
 ## 📌 Table of Contents
 
-- [✨ Features](#✨features)
-- [📂 Project Structure](#📂project-structure)
-- [⚙️ Installation](#⚙️installation)
-- [🛠️ Usage](#🛠️usage)
-- [🗃️ Database Schema](#🗃️database-schema)
-- [🛠️ Technologies Used](#🛠️technologies-used)
-- [📸 Screenshots](#📸screenshots)
-- [👨‍💻 Author](#👨‍💻author)
+## 📌 Table of Contents
+
+- [✨ Features](#features)
+- [📂 Project Structure](#project-structure)
+- [⚙️ Installation](#installation)
+- [🛠️ Usage](#usage)
+- [🗃️ Database Schema](#database-schema)
+- [🛠️ Technologies Used](#technologies-used)
+- [📸 Screenshots](#screenshots)
+- [👨‍💻 Author](#author)
 
 ---
 
