@@ -1,0 +1,101 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+/* Card Styles */
+.stat-card {
+  background: rgba(16, 28, 64, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  color: var(--primary-color);
+}
+
+.stat-card h5 {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.stat-card h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+.dashboard-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: rgba(16, 28, 64, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  min-width: 300px;
+  box-shadow: var(--card-shadow);
+  flex: 1 1 300px;
+  max-width: 100%;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.chart-container{
+  position: relative; height: 350px;
+}
+.recent-hires-list {
+  margin-top: 1rem;
+}
+
+.hire-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(0, 240, 255, 0.05);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.hire-item .hire-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.hire-item h4 {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.hire-item span {
+  color: var(--primary-color);
+  font-size: 0.875rem;
+}
+
+.hire-item p {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.hire-item .hire-item-info i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+@media (max-width: 720px) {
+  .card canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}

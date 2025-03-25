@@ -1,0 +1,119 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: rgba(16, 28, 64, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+.card-header {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+th {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+tr:hover {
+  background: rgba(0, 240, 255, 0.05);
+}
+
+@media (max-width: 720px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .card canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 720px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  .dashboard-grid {
+    margin-top: 1rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .chart-container {
+    height: 200px;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+
+  .card-header {
+    font-size: 1rem;
+  }
+}

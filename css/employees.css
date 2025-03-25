@@ -1,0 +1,314 @@
+.main-content {
+  overflow-x: auto;
+}
+.table-container {
+  overflow-x: auto;
+  margin: 1rem 0;
+  background: rgba(16, 28, 64, 0.8);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(16, 28, 64, 0.8);
+  color: var(--text-light);
+  width: 250px;
+}
+
+.entries-select {
+  padding: 0.5rem;
+  background: rgba(16, 28, 64, 0.8);
+  color: var(--text-light);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+tr:hover {
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.sort-icon {
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.pagination-info {
+  color: var(--text-light);
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-button {
+  padding: 0.5rem 1rem;
+  background: rgba(16, 28, 64, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  color: var(--text-light);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: rgba(0, 240, 255, 0.1);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn {
+  padding: 0.5rem;
+  border: 2px solid transparent;
+  margin-right: 0.5rem;
+  color: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  /* Add these new properties */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.btn-warning {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 107, 0, 0.5),
+    rgba(255, 193, 5, 0.5)
+  );
+  border-color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 107, 0, 0.7);
+}
+
+.btn-warning:hover {
+  background: linear-gradient(45deg, #ffc107, #ff6b00);
+}
+
+.btn-danger {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 8, 70, 0.5),
+    rgba(220, 53, 70, 0.5)
+  );
+  border-color: #ff0040;
+  text-shadow: 0 0 5px rgba(220, 53, 69, 0.7);
+}
+
+.btn-danger:hover {
+  background: linear-gradient(45deg, #dc3545, #ff0844);
+}
+
+th {
+  background: rgba(16, 28, 64, 0.9);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  transition: background 0.3s ease-in-out;
+}
+
+th:hover {
+  background: rgba(0, 240, 255, 0.2);
+}
+
+.sort-icon {
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+  margin-left: 0.5rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Default state before sorting */
+th {
+  background: rgba(16, 28, 64, 0.9);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+th:hover {
+  background: rgba(0, 240, 255, 0.2);
+}
+
+/* Default state before sorting */
+.sort-icon {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+/* Reset icons */
+th .sort-icon::before {
+  content: "";
+}
+
+/* Ascending Sort */
+th[data-sort-direction="asc"] .sort-icon::before {
+  content: "▲";
+}
+
+/* Descending Sort */
+th[data-sort-direction="desc"] .sort-icon::before {
+  content: "▼";
+}
+
+@media (max-width: 768px) {
+  table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+  }
+  td {
+    display: block;
+    padding: 0.5rem;
+    border: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: block;
+    color: var(--primary-color);
+  }
+
+  thead {
+    display: none;
+  }
+
+  .table-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  td[data-label="Actions"] {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .btn {
+    margin-right: 0;
+  }
+}
+/* Styles for screens below 450px */
+@media (max-width: 410px) {
+  .table-container {
+    margin: 0.5rem 0;
+    border-radius: 4px;
+  }
+
+  .table-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .entries-select {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  table {
+    overflow-x: auto;
+  }
+  tbody{
+      width: 100%;
+  }
+
+  tr {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  td {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  td::before {
+    font-size: 0.8rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .pagination-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .btn-warning, .btn-danger {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+}
